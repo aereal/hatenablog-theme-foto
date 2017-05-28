@@ -16,5 +16,8 @@
     "compile_options": "--output-style expanded --source-map-embed",
     "output_path": "dist/",
     "input_path": "src/"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.0"
   }
 }
