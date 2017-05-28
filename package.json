@@ -6,7 +6,8 @@
   "author": "aereal <aereal@aereal.org>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2"
   },
   "scripts": {
     "compile": "node-sass $npm_package_config_compile_options --output $npm_package_config_output_path $npm_package_config_input_path"
