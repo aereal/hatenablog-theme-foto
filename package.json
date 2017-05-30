@@ -10,12 +10,16 @@
     "npm-run-all": "^4.0.2"
   },
   "scripts": {
-    "compile": "node-sass $npm_package_config_compile_options --output $npm_package_config_output_path $npm_package_config_input_path"
+    "compile": "node-sass $npm_package_config_compile_options --output $npm_package_config_output_path $npm_package_config_input_path",
+    "compile:watch": "node-sass --watch $npm_package_config_compile_options --output $npm_package_config_output_path $npm_package_config_input_path",
+    "start": "python -m SimpleHTTPServer $npm_package_config_port",
+    "develop": "run-p start compile:watch"
   },
   "config": {
-    "compile_options": "--output-style expanded --source-map-embed",
+    "compile_options": "--output-style expanded --source-map-embed --include-path node_modules/normalize-scss/sass/",
     "output_path": "dist/",
-    "input_path": "src/"
+    "input_path": "src/",
+    "port": 8000
   },
   "dependencies": {
     "normalize-scss": "^7.0.0"
